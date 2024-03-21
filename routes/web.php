@@ -19,3 +19,8 @@ Route::get('/view', function()
     return view('view', ['gcash' => Gcash::all()]);
 });
 Route::put('/edit/{id}', [GcashController::class, 'update']);
+Route::get('/practice', function()
+{
+    return view('practice');
+});
+Route::delete('/delete/{id}', [GcashController::class, 'delete']);
